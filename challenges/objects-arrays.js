@@ -140,12 +140,14 @@ only the animal and scientific names in it.  The individual values in the array 
 this "Name: Jackal, asiatic, Scientific: Canis aureus."
 */
 
-let animalNames = [];
-for (let [key, value] of Object.entries(zooAnimals)) {
-  console.log(`${zooAnimals[2].scientific_name}: ${value.scientific_name}`);
-} 
+
  
- console.log(animalNames);
+ 
+ let animalNames = [] ;
+ let critters = zooAnimals.forEach(function(i){
+  zooAnimals.push(i.animal_name + " " + i.scientific_name);
+});
+console.log(animalNames); 
  
  
 
@@ -160,7 +162,8 @@ let lower = zooAnimals.map((name => name.animal_name.toLowerCase()));
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concenred about animals with a lower population count. Find out which animals have a 
+population less than 5.
 */
 const lowerPopulation = [];
 zooAnimals.filter(function(count) {
@@ -171,7 +174,8 @@ zooAnimals.filter(function(count) {
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
-The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
+The zoos need to know their total animal population across the United States.  Find the total population from 
+all the zoos using the .reduce() method.
 */
 const populationTotal = 0;
 let numbers = zooAnimals.reduce(function(acc, val, index) {
