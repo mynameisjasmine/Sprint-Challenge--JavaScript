@@ -108,10 +108,10 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array 
 called uni that contains them all. Log the result. */
 
-let uni = [];
 
- uni = graduates.filter(function(words){
-  return words.university == "Uni";
+
+  const uni = graduates.filter(function(words){
+  return words.university.includes('Uni');
 });
 
 
@@ -144,8 +144,8 @@ this "Name: Jackal, asiatic, Scientific: Canis aureus."
  
  
  let animalNames = [] ;
- let critters = zooAnimals.forEach(function(i){
-  zooAnimals.push(i.animal_name + " " + i.scientific_name);
+  zooAnimals.forEach(function(i){
+    animalNames.push(i.animal_name + " " + i.scientific_name);
 });
 console.log(animalNames); 
  
