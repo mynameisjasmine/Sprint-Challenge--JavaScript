@@ -31,6 +31,42 @@ console.log();
 console.log();
 
 
+const trex = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous', 
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+  noise: function(sound) {
+    return sound;
+  }
+
+}
+
+
+const stego = {
+  name: 'stegosaurus',
+  diet: 'herbivorous', 
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+}
+
+const veloci = {
+  name: 'velociraptor',
+  diet: 'carnivorous', 
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceous'
+}
+
+
+console.log(trex.weight);   // console logs trex weight
+console.log(veloci.diet);  // console logs veolci's diet
+console.log(stego.length); // console logs stego's length
+console.log(trex.period);  // console logs trex's time period
+console.log(trex.noise("RAWERSRARARWERSARARARRRR!"));// console logs "RAWERSRARARWERSARARARRRR!"
+
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
@@ -50,6 +86,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+let schools = graduates.forEach(function(i){
+ universities.push(i.university);
+});
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -59,6 +99,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+let contacts = graduates.forEach(function(i){
+  contactInfo.push(i.first_name + ' ' + i.email)
+})
 console.log(contactInfo);
 
 

@@ -28,6 +28,8 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
+
+
 1. Describe the biggest difference between `.forEach` & `.map`?
 
 The biggest difference is .map creates a new array
