@@ -139,11 +139,15 @@ The zoo wants to display both the scientific name and the animal name in front o
 only the animal and scientific names in it.  The individual values in the array should look like 
 this "Name: Jackal, asiatic, Scientific: Canis aureus."
 */
-//  const animalNames = [];
-//  let twoNames = zooAnimals.forEach((name => name[0].animal_name,name[2].scientific_name ))
-//       animalNames.push(twoNames);
+
+let animalNames = [];
+for (let [key, value] of Object.entries(zooAnimals)) {
+  console.log(`${zooAnimals[2].scientific_name}: ${value.scientific_name}`);
+} 
  
-//  console.log(animalNames);
+ console.log(animalNames);
+ 
+ 
 
 /* Request 2: .map()    
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a 
