@@ -90,7 +90,7 @@ let schools = graduates.forEach(function(i){
  universities.push(i.university);
 });
 
-console.log(universities)
+console.log(universities.sort())
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -107,14 +107,15 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array 
 called uni that contains them all. Log the result. */
-// let uni = [];
-//  uni = graduates.map(function(list) {
-//       if (graduates.university === 'Uni')
-//        return list[i].university;
-//     }
 
-//  )
-//  console.log(uni);
+let uni = [];
+
+ uni = graduates.filter(function(words){
+  return words.university == "Uni";
+});
+
+
+ console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -145,7 +146,8 @@ this "Name: Jackal, asiatic, Scientific: Canis aureus."
 //  console.log(animalNames);
 
 /* Request 2: .map()    
-The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
+The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a 
+new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 */
 
 const lowerCase = [];

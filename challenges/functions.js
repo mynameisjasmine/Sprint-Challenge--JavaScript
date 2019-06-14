@@ -34,8 +34,8 @@ function consume(num1, num2, cb){
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: Because it is an inner function that has access to the outer function's variable because 
-//it is enclosed within that outer function. 
+/*Explanation: Because it is an inner function that has access to the outer function's variable because 
+it is enclosed within that outer function. */
 
 
 const external = "I'm outside the function";
